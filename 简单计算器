@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div class="container">
+	<div><label for="firstNumber">请输入第一个数字:</label><input type="text" id="firstNumber"></div>
+	<div><label for="secondNumber">请输入第二个数字:</label><input type="text" id="secondNumber"></div>
+	<div><label for="operator">点击一个运算符:</label>
+	<button id="add" style="width:inherit" onclick="addNumber()">+</button>
+	<button id="subtract" style="width:inherit" onclick="subtractNumber()">-</button>
+	<button id="ride" style="width:inherit" onclick="rideNumber()">*</button>
+	<button id="divide" style="width:inherit" onclick="divideNumber()">/</button>
+	</div>
+	<div>
+		<p id="result"></p>
+	</div>
+	<script>
+		function addNumber(){
+			var a = document.getElementById("firstNumber").value;
+			var b = document.getElementById("secondNumber").value;
+			var c= Number(a)+Number(b)
+			;
+			output(c);
+		}
+		function subtractNumber(){
+			var a = document.getElementById("firstNumber").value;
+			var b = document.getElementById("secondNumber").value;
+			var c= a-b;
+			output(c);
+		}
+		function rideNumber(){
+			var a = document.getElementById("firstNumber").value;
+			var b = document.getElementById("secondNumber").value;
+			var c= a*b;
+			output(c);
+		}
+		function divideNumber(){
+			var a = document.getElementById("firstNumber").value;
+			var b = document.getElementById("secondNumber").value;
+			var c= a/b;
+			output(c);
+		}
+		function output(result){
+			var num = document.getElementById("result");
+			num.innerHTML = result;
+		}
+	</script>
+</body>
+</html>
